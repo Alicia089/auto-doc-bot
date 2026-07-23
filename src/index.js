@@ -18,7 +18,9 @@ const app = new App({
 app.command("/doc", async ({ command, ack, respond }) => {
   await ack();
 
-  const workflowId = command.text.trim();
+  // Strip Slack formatting / stray characters (backticks, asterisks, zero-width, whitespace)
+  // so a pasted or auto-formatted workflow ID still resolves. n8n IDs are [A-Za-z0-9_-].
+  const workflowId = command.text.replace(/[^A-Za-z0-9_-]/g, "");
   if (!workflowId) {
     await respond("Usage: `/doc <workflow-id>` or paste workflow JSON and tag me.");
     return;

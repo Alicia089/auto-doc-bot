@@ -4,6 +4,8 @@ Slack bot that auto-documents n8n workflows in Notion using the Claude API.
 
 Tag the bot with pasted workflow JSON or use `/doc <workflow-id>` to pull directly from n8n — it generates structured documentation and writes it to a Notion database in seconds.
 
+**➡️ See [SAMPLE_OUTPUT.md](SAMPLE_OUTPUT.md)** for real documentation the bot generated from an n8n workflow (Slack → n8n → Claude → Notion, end to end).
+
 ## How It Works
 
 ```
