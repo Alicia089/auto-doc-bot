@@ -99,6 +99,7 @@ auto-doc-bot/
 │   ├── claude.js      # Claude API — generates structured docs from workflow JSON
 │   ├── notion.js      # Notion API — creates pages with markdown→block conversion
 │   └── n8n.js         # Optional n8n client — pulls workflow JSON by ID
+├── demo.js            # Standalone demo — generate docs from a sample workflow (no Slack/Notion)
 ├── .env.example       # Required environment variables
 ├── package.json
 └── README.md
@@ -106,7 +107,7 @@ auto-doc-bot/
 
 ## Notes
 
-- This is a demo version. The production implementation at my employer includes additional features (workflow diffing, scheduled re-docs, Slack thread follow-ups) that are proprietary.
+- To see the core doc-generation step without setting up Slack or Notion, set `ANTHROPIC_API_KEY` in your `.env` and run `node demo.js`.
 - The n8n integration is optional — the bot works without it by accepting pasted JSON.
 - Notion's API limits block creation to 100 blocks per request. For very large workflows, the documentation is truncated.
 
