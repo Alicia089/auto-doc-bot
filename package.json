@@ -1,0 +1,19 @@
+{
+  "name": "auto-doc-bot",
+  "version": "1.0.0",
+  "description": "Slack bot that auto-documents n8n workflows in Notion using Claude API",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "keywords": ["slack", "notion", "claude-api", "n8n", "documentation", "automation"],
+  "author": "Alicia089",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@notionhq/client": "^2.2.15",
+    "@slack/bolt": "^4.1.0",
+    "dotenv": "^16.4.7"
+  }
+}
